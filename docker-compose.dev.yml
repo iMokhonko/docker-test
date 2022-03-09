@@ -8,6 +8,8 @@ services:
         NODE_ENV: development
     environment:
       - NODE_ENV=development
+      - MONGO_USER=admin
+      - MONGO_PASSWORD=admin
     volumes:
       - ./:/application
     command: npm run dev

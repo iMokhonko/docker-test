@@ -6,15 +6,15 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-
     "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d",
     "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build",
-    "docker:stop": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v"
+    "docker:stop": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.2.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
