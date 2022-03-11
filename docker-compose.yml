@@ -6,6 +6,7 @@ services:
       - "3000:3000"
     depends_on:
       - mongo
+
   mongo: 
     image: mongo
     environment:
@@ -13,5 +14,14 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
       - mongo:/data/db
+    
+  nginx: 
+    image: nginx:stable-alpine
+    ports:
+      - "80:80" 
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    
 volumes:
   mongo:
+  redis:
