@@ -3,7 +3,7 @@ version: '3'
 services:
   node-app:
     deploy:
-      replicas: 8,
+      replicas: 8
       restart_police:
         condition: any
       update_config:
