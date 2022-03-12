@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d",
+    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2",
     "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build",
     "docker:stop": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down"
   },
