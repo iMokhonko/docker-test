@@ -1,6 +1,8 @@
 const app = require('express')();
+const cors = require('cors');
 
 app.enable('trust proxy');
+app.use(cors());
 
 const mongoose = require('mongoose');
 

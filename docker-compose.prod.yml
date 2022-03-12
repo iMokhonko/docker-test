@@ -8,4 +8,11 @@ services:
         NODE_ENV: production
     environment:
         - NODE_ENV=producation
+        - MONGO_USER=${MONGO_USER}
+        - MONGO_PASSWORD=${MONGO_PASSWORD}
     command: npm run start
+
+  mongo: 
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
