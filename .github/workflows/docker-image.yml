@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build & Push docker image
-      uses: mr-smithers-excellent/docker-build-push@v4
+      uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: imokhonko/node-app
         tags: v1, latest
