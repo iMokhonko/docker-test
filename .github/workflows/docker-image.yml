@@ -7,9 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -29,5 +27,9 @@ jobs:
         host: ${{ secrets.INSTANCE_IP_ADDRESS }}
         username: root
         password: ${{ secrets.INSTANCE_ROOT_PASSWORD }}
-        script: whoami
+        script: |
+          cd /application
+          git pull origin master
+          npm run docker:prod
+
 
