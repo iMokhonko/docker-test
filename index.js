@@ -10,7 +10,6 @@ const connectWithRetry = () => {
   mongoose.connect(mongoConnectUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
   })
     .then(() => { console.log('connected to DB'); })
     .catch((e) => { 
@@ -22,6 +21,7 @@ const connectWithRetry = () => {
 connectWithRetry();
 
 app.get('/', (req, res) => {
+  console.log(req.headers);
   res.send(`mode: ${process.env.NODE_ENV}`);
 })
 
