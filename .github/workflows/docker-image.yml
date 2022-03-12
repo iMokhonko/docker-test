@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Build & push docker image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
@@ -22,4 +22,12 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+      
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.INSTANCE_IP_ADDRESS }}
+        username: root
+        password: ${{ secrets.INSTANCE_ROOT_PASSWORD }}
+        script: whoami
 
