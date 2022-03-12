@@ -28,7 +28,7 @@ connectWithRetry();
 
 app.get('/', (req, res) => {
   console.log(req.headers);
-  res.send(`mode: ${process.env.NODE_ENV}`);
+  res.send(`mode123: ${process.env.NODE_ENV}`);
 })
 
 const port = process.env.PORT || 3000;
