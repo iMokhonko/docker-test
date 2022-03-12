@@ -7,7 +7,7 @@ services:
       args: 
         NODE_ENV: production
     environment:
-        - NODE_ENV=producation
+        - NODE_ENV=${NODE_ENV}
         - MONGO_USER=${MONGO_USER}
         - MONGO_PASSWORD=${MONGO_PASSWORD}
     command: npm run start
