@@ -13,10 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build & push docker image
+    - name: Build & Push docker image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: imokhonko/node-app
+        tags: keklol
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
