@@ -28,7 +28,7 @@ jobs:
         username: root
         password: ${{ secrets.INSTANCE_ROOT_PASSWORD }}
         script: |
-          cd /application
+          cd application
           git pull origin master
           npm run docker:prod
 
