@@ -3,6 +3,13 @@ version: '3'
 services:
   node-app:
     image: imokhonko/node-app:dev
+    deploy:
+    replicas: 8
+    restart_policy:
+      condition: any
+    update_config:
+      parallelism: 2
+      delay: 10s
     build: 
       context: .
       args: 
