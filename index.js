@@ -28,7 +28,7 @@ connectWithRetry();
 
 app.get('/', (req, res) => {
   console.log(req.headers);
-  res.send(`mode: ${process.env.NODE_ENV} (DEV env with swarm)`);
+  res.send(`mode: ${process.env.NODE_ENV} (DEV env with swarm123)`);
 })
 
 const port = process.env.PORT || 3000;
