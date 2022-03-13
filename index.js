@@ -27,11 +27,11 @@ const connectWithRetry = () => {
 connectWithRetry();
 
 app.get('/', (req, res) => {
-  res.send(`mode: ${process.env.NODE_ENV} (DEV env)`);
+  res.send(`mode: ${process.env.NODE_ENV} (QA env)`);
 });
 
 app.get('/info', (req, res) => {
-  res.send(`this is some info`);
+  res.send(`this is some info on QA env`);
 })
 
 const port = process.env.PORT || 3000;
