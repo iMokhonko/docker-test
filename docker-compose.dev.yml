@@ -2,7 +2,7 @@ version: '3'
 
 services:
   node-app:
-    image: imokhonko/node-app:qa
+    image: imokhonko/node-app:dev
     build: 
       context: .
       args: 
