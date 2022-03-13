@@ -2,6 +2,7 @@ version: '3'
 
 services:
   node-app:
+    image: imokhonko/node-app:dev
     deploy:
       replicas: 8
       restart_policy:

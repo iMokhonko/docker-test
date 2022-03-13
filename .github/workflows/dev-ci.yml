@@ -28,6 +28,7 @@ jobs:
     #     password: ${{ secrets.INSTANCE_ROOT_PASSWORD }}
     #     script: |
     #       cd application
+    #       git checkout dev
     #       git pull origin dev
     #       npm run docker:prod
 
