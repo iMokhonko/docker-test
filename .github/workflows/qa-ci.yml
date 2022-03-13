@@ -28,7 +28,8 @@ jobs:
         password: ${{ secrets.INSTANCE_ROOT_PASSWORD }}
         script: |
           cd application
+          git checkout qa
           git pull origin qa
-          npm run docker:prod
+          docker stack deploy -c docker-compose.yml -c docker-compose.qa.yml application
 
 

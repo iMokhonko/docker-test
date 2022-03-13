@@ -2,6 +2,7 @@ version: '3'
 
 services:
   node-app:
+    image: imokhonko/node-app:qa
     build: 
       context: .
       args: 
@@ -12,7 +13,7 @@ services:
       - MONGO_PASSWORD=admin
     volumes:
       - ./:/application
-    command: npm run dev
+    command: npm run start
 
   mongo: 
     environment:
