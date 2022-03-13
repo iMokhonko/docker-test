@@ -30,6 +30,7 @@ jobs:
           cd application
           git checkout qa
           git pull origin qa
+          docker stack rm application
           docker stack deploy -c docker-compose.yml -c docker-compose.qa.yml application
 
 
