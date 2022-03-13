@@ -2,7 +2,7 @@ version: '3'
 
 services:
   node-app:
-    image: imokhonko/node-app:production
+    image: imokhonko/node-app:latest
     deploy:
       replicas: 8
       restart_policy:
@@ -15,9 +15,9 @@ services:
       args: 
         NODE_ENV: production
     environment:
-        - NODE_ENV=production
-        - MONGO_USER=${MONGO_USER}
-        - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - NODE_ENV=production
+      - MONGO_USER=${MONGO_USER}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
     command: npm run start
 
   mongo: 
